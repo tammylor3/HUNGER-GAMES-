@@ -10,7 +10,9 @@
     "spineStyle": "magenta",
     "icon": "mockingjay",
     "height": 342,
-    "tassel": true
+    "tassel": true,
+    "coverPath": "/manus-storage/the-hunger-games_e5657509.jpg",
+    "fallbackCoverPath": "/covers/the-hunger-games.jpg"
   },
   {
     "id": "catching-fire",
@@ -23,7 +25,9 @@
     "spineStyle": "sunset",
     "icon": "flame",
     "height": 376,
-    "tassel": false
+    "tassel": false,
+    "coverPath": "/manus-storage/catching-fire_59adcca6.jpg",
+    "fallbackCoverPath": "/covers/catching-fire.jpg"
   },
   {
     "id": "mockingjay",
@@ -36,7 +40,9 @@
     "spineStyle": "pearl",
     "icon": "rose",
     "height": 360,
-    "tassel": true
+    "tassel": true,
+    "coverPath": "/manus-storage/mockingjay_03652c61.jpg",
+    "fallbackCoverPath": "/covers/mockingjay.jpg"
   },
   {
     "id": "songbirds-snakes",
@@ -49,7 +55,9 @@
     "spineStyle": "emerald",
     "icon": "snake",
     "height": 394,
-    "tassel": false
+    "tassel": false,
+    "coverPath": "/manus-storage/songbirds-snakes_8a5704ef.jpg",
+    "fallbackCoverPath": "/covers/songbirds-snakes.jpg"
   },
   {
     "id": "sunrise-reaping",
@@ -62,6 +70,8 @@
     "spineStyle": "champagne",
     "icon": "wheat",
     "height": 368,
-    "tassel": true
+    "tassel": true,
+    "coverPath": "/manus-storage/sunrise-on-the-reaping_7a8e8247.jpg",
+    "fallbackCoverPath": "/covers/sunrise-reaping.jpg"
   }
 ]

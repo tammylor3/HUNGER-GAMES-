@@ -16,6 +16,8 @@ type Book = {
   icon: IconName
   height: number
   tassel: boolean
+  coverPath: string
+  fallbackCoverPath: string
 }
 type OrderMode = 'publication' | 'events'
 
@@ -175,14 +177,9 @@ function CapitolArchive() {
                 <div className="cap-selection-layout" onClick={(event) => event.stopPropagation()}>
                   <motion.div className={`cap-open-book cap-${selectedBook.spineStyle}`} initial={shouldReduceMotion ? false : { x: -42, rotateY: -78, opacity: 0, scale: .84 }} animate={{ x: 0, rotateY: 0, opacity: 1, scale: 1 }} transition={transition}>
                     <div className="cap-front-cover">
+                      <img className="cap-official-cover" src={selectedBook.coverPath} alt={`${selectedBook.title} official cover`} onError={(event) => { event.currentTarget.src = selectedBook.fallbackCoverPath }} />
                       <div className="cap-cover-frame" aria-hidden="true" />
-                      <span className="cap-cover-overline">PANEM CAPITOL LIBRARY</span>
-                      <span className="cap-cover-series">{selectedBook.seriesOrder === 'prequel' ? 'PREQUEL' : `VOLUME ${roman[selectedBook.seriesOrder - 1]}`}</span>
-                      <h2>{selectedBook.title}</h2>
-                      <div className="cap-cover-divider" />
-                      <CapitolIcon name={selectedBook.icon} className={selectedBook.icon === 'mockingjay' ? 'cap-mockingjay-mark' : ''} />
-                      <span className="cap-cover-year">{selectedBook.year}</span>
-                      <span className="cap-cover-author">SUZANNE COLLINS</span>
+                      <span className="cap-cover-badge">OFFICIAL COVER</span>
                     </div>
                     <div className="cap-cover-pages" aria-hidden="true" />
                   </motion.div>
