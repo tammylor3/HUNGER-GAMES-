@@ -148,6 +148,8 @@ The selected-book interaction was refined to feel like someone is physically tak
 - The official cover rises from below with a staged lift, rotation, scale-up, and settle into the non-modal pull-out view.
 - The animation remains disabled or instantaneous under `prefers-reduced-motion`.
 
+The motion was further refined to feel more physical and restrained: neighboring volumes now ease inward to close the gap, while the selected book uses a staged upward lift, shelf clearance, natural camera-facing rotation, and soft final settle without exaggerated bounce.
+
 ## Current source structure
 
 ```text
@@ -207,7 +209,7 @@ public/
 | `d2a98a6` | Add book reading destination links |
 | `0e76d2e` | Link primary book action to Amazon |
 | `dc87ac6` | Remove retailer links from pullout card |
-| pending | Add shelf pick-off selection animation |
+| latest | Refine realistic shelf pick-off extraction animation |
 
 ## Repository
 

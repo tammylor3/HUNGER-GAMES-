@@ -41,10 +41,10 @@ export default function CapitolPullout({ book, shouldReduceMotion, onClose }: Ca
           <div className="cap-pullout-stage">
             <motion.div
               className={`cap-pullout-book cap-${book.spineStyle}`}
-              initial={shouldReduceMotion ? false : { x: 0, y: 232, rotateY: 72, rotateZ: -5, scale: .72, opacity: 0 }}
-              animate={shouldReduceMotion ? { x: 0, y: 0, rotateY: -8, rotateZ: 0, scale: 1, opacity: 1 } : { x: [0, -14, 0], y: [232, 74, 0], rotateY: [72, 26, -8], rotateZ: [-5, -2, 0], scale: [.72, .86, 1], opacity: [0, 1, 1] }}
-              exit={shouldReduceMotion ? undefined : { x: -34, y: 32, rotateY: -58, rotateZ: -3, scale: .82, opacity: 0 }}
-              transition={shouldReduceMotion ? { duration: 0 } : { duration: .72, times: [0, .54, 1], ease: ['easeIn', 'easeOut'], type: 'tween' }}
+              initial={shouldReduceMotion ? false : { x: 0, y: 236, rotateY: 66, rotateZ: -4, scale: .78, opacity: 0 }}
+              animate={shouldReduceMotion ? { x: 0, y: 0, rotateY: -8, rotateZ: 0, scale: 1, opacity: 1 } : { x: [0, -10, -5, 0], y: [236, 82, 18, 0], rotateY: [66, 30, 4, -8], rotateZ: [-4, -2.4, -.8, 0], scale: [.78, .88, .97, 1], opacity: [0, .9, 1, 1] }}
+              exit={shouldReduceMotion ? undefined : { x: -26, y: 30, rotateY: -48, rotateZ: -2, scale: .86, opacity: 0 }}
+              transition={shouldReduceMotion ? { duration: 0 } : { duration: .88, times: [0, .4, .76, 1], ease: ['easeIn', 'easeOut', 'easeInOut'], type: 'tween' }}
             >
               <div className="cap-pullout-cover">
                 <img

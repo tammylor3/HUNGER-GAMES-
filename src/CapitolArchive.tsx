@@ -118,15 +118,15 @@ function CapitolArchive() {
                 {sortedBooks.map((book, index) => {
                   const isSelected = book.id === selectedId
                   const selectedIndex = selectedId ? sortedBooks.findIndex((item) => item.id === selectedId) : -1
-                  const shelfShift = selectedId && !isSelected ? (index < selectedIndex ? -8 : 8) : 0
+                  const shelfShift = selectedId && !isSelected ? (index < selectedIndex ? 7 : -7) : 0
                   return (
                     <motion.article
                       key={book.id}
                       layout
                       initial={shouldReduceMotion ? false : { opacity: 0, y: 24 }}
-                      animate={{ opacity: isSelected ? .46 : 1, x: isSelected ? -18 : shelfShift, y: isSelected ? -10 : 0, rotateY: isSelected ? -14 : 0, scale: isSelected ? .985 : 1 }}
+                      animate={{ opacity: isSelected ? .2 : 1, x: isSelected ? -10 : shelfShift, y: isSelected ? -17 : 0, rotateY: isSelected ? -11 : 0, rotateZ: isSelected ? -1.5 : 0, scale: isSelected ? .99 : 1 }}
                       exit={shouldReduceMotion ? undefined : { opacity: 0, y: 24 }}
-                      transition={transition}
+                      transition={shouldReduceMotion ? { duration: 0 } : { type: 'spring', stiffness: 180, damping: 25, mass: .82 }}
                       whileHover={shouldReduceMotion ? undefined : { y: -13, rotateY: -9, rotateX: 2 }}
                       className={`cap-book-card cap-${book.spineStyle} ${isSelected ? 'is-selected' : ''}`}
                       style={{ '--cap-book-height': `${book.height}px`, '--cap-book-index': index } as CSSProperties}
