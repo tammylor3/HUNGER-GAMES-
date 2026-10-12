@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState, type CSSProperties, type KeyboardEvent } from 'react'
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 import books from './data/capitol-books.json'
+import CapitolPullout from './CapitolPullout'
 
 type IconName = 'mockingjay' | 'flame' | 'rose' | 'snake' | 'wheat'
 type SeriesOrder = number | 'prequel'
@@ -121,7 +122,7 @@ function CapitolArchive() {
                       key={book.id}
                       layout
                       initial={shouldReduceMotion ? false : { opacity: 0, y: 24 }}
-                      animate={{ opacity: isSelected ? 0 : 1, y: 0, scale: isSelected ? .9 : 1 }}
+                      animate={{ opacity: isSelected ? .28 : 1, y: 0, scale: isSelected ? .98 : 1 }}
                       exit={shouldReduceMotion ? undefined : { opacity: 0, y: 24 }}
                       transition={transition}
                       whileHover={shouldReduceMotion ? undefined : { y: -13, rotateY: -9, rotateX: 2 }}
@@ -155,35 +156,7 @@ function CapitolArchive() {
             <div className="cap-reflection" aria-hidden="true" />
           </div>
 
-          <AnimatePresence>
-            {selectedBook && (
-              <motion.div className="cap-selection-layer" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={shouldReduceMotion ? { duration: 0 } : { duration: .34 }} onClick={() => setSelectedId(null)} role="dialog" aria-modal="true" aria-label={`${selectedBook.title} details`}>
-                <div className="cap-glitter-burst" aria-hidden="true">
-                  {Array.from({ length: 11 }, (_, index) => <motion.i key={index} initial={{ scale: 0, opacity: 0, x: 0, y: 0 }} animate={shouldReduceMotion ? undefined : { scale: [0, 1, 0], opacity: [0, 1, 0], x: Math.cos(index * .57) * (60 + index * 5), y: Math.sin(index * .57) * (50 + index * 4) }} transition={shouldReduceMotion ? undefined : { duration: .8, delay: index * .025 }} />)}
-                </div>
-                <div className="cap-selection-layout" onClick={(event) => event.stopPropagation()}>
-                  <motion.div className={`cap-open-book cap-${selectedBook.spineStyle}`} initial={shouldReduceMotion ? false : { x: -42, rotateY: -78, opacity: 0, scale: .84 }} animate={{ x: 0, rotateY: 0, opacity: 1, scale: 1 }} transition={transition}>
-                    <div className="cap-front-cover">
-                      <img className="cap-official-cover" src={selectedBook.coverPath} alt={`${selectedBook.title} official cover`} onError={(event) => { event.currentTarget.src = selectedBook.fallbackCoverPath }} />
-                      <div className="cap-cover-frame" aria-hidden="true" />
-                      <span className="cap-cover-badge">OFFICIAL COVER</span>
-                    </div>
-                    <div className="cap-cover-pages" aria-hidden="true" />
-                  </motion.div>
-                  <motion.aside className="cap-detail-card" initial={shouldReduceMotion ? false : { x: 30, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={shouldReduceMotion ? { duration: 0 } : { duration: .36, delay: .08 }}>
-                    <div className="cap-detail-topline"><span>CAPITOL RECORD {String(selectedBook.publicationOrder).padStart(2, '0')}</span><span>{selectedBook.year}</span></div>
-                    <p className="cap-detail-kicker">A VOLUME OF DISTINCTION</p>
-                    <h2>{selectedBook.title}</h2>
-                    <div className="cap-detail-rule" />
-                    <p className="cap-detail-blurb">{selectedBook.blurb}</p>
-                    <a className="cap-enter-link" href={`/capitol/about/${selectedBook.id}`} onClick={(event) => event.preventDefault()}>ENTER THE VOLUME <span>→</span></a>
-                    <div className="cap-detail-footer"><span>ESC TO CLOSE</span><span>← → NEXT VOLUME</span></div>
-                  </motion.aside>
-                </div>
-                <button className="cap-close-button" onClick={() => setSelectedId(null)} aria-label="Close book details">×</button>
-              </motion.div>
-            )}
-          </AnimatePresence>
+          <CapitolPullout book={selectedBook} shouldReduceMotion={shouldReduceMotion} onClose={() => setSelectedId(null)} />
         </section>
       </main>
 
