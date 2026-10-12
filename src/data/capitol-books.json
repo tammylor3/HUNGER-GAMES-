@@ -26,7 +26,7 @@
     "icon": "flame",
     "height": 376,
     "tassel": false,
-    "coverPath": "/manus-storage/catching-fire_59adcca6.jpg",
+    "coverPath": "/manus-storage/catching-fire_4eb593e0.jpg",
     "fallbackCoverPath": "/covers/catching-fire.jpg"
   },
   {
@@ -41,7 +41,7 @@
     "icon": "rose",
     "height": 360,
     "tassel": true,
-    "coverPath": "/manus-storage/mockingjay_03652c61.jpg",
+    "coverPath": "/manus-storage/mockingjay_30fe0386.jpg",
     "fallbackCoverPath": "/covers/mockingjay.jpg"
   },
   {
@@ -56,7 +56,7 @@
     "icon": "snake",
     "height": 394,
     "tassel": false,
-    "coverPath": "/manus-storage/songbirds-snakes_8a5704ef.jpg",
+    "coverPath": "/manus-storage/songbirds-snakes_c5489cb1.jpg",
     "fallbackCoverPath": "/covers/songbirds-snakes.jpg"
   },
   {
