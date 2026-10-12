@@ -1,6 +1,11 @@
-# The Hunger Games Library
+# Panem bookshelf editions
 
-A single-page React + Tailwind + Framer Motion bookshelf for the five Panem novels, with CSS 3D book spines, original typographic covers, animated ordering, keyboard navigation, and a responsive mobile bottom sheet.
+This project contains two separate visual editions of the interactive Panem bookshelf:
+
+- `/` — **The Hunger Games Library**, the original dark cinematic archive.
+- `/capitol` — **The Capitol Archive**, a blush, orchid, pearl, and gold Capitol glam edition.
+
+Both editions use React, Tailwind, CSS 3D transforms, Framer Motion, local JSON seed data, keyboard navigation, responsive mobile bottom sheets, and reduced-motion support.
 
 ## Run locally
 
@@ -15,4 +20,4 @@ pnpm dev
 pnpm build
 ```
 
-The seed data lives in `src/data/books.json`; the page route manifest is `public/manus-routes.json`.
+Seed data lives in `src/data/books.json` and `src/data/capitol-books.json`; the route manifest is `public/manus-routes.json`.

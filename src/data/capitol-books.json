@@ -1,0 +1,67 @@
+[
+  {
+    "id": "hunger-games",
+    "title": "The Hunger Games",
+    "year": 2008,
+    "publicationOrder": 1,
+    "seriesOrder": 1,
+    "chronologicalOrder": 3,
+    "blurb": "A dazzling televised spectacle, darling, where one girl's instincts transform survival into the most unforgettable performance Panem has ever applauded. Expect suspense, alliances, and a finale with impeccable dramatic timing.",
+    "spineStyle": "magenta",
+    "icon": "mockingjay",
+    "height": 342,
+    "tassel": true
+  },
+  {
+    "id": "catching-fire",
+    "title": "Catching Fire",
+    "year": 2009,
+    "publicationOrder": 2,
+    "seriesOrder": 2,
+    "chronologicalOrder": 4,
+    "blurb": "The victory tour glitters beautifully until the districts begin telling their own story. A second engagement with the Games brings heightened stakes, sharper silhouettes, and absolutely no shortage of spectacle.",
+    "spineStyle": "sunset",
+    "icon": "flame",
+    "height": 376,
+    "tassel": false
+  },
+  {
+    "id": "mockingjay",
+    "title": "Mockingjay",
+    "year": 2010,
+    "publicationOrder": 3,
+    "seriesOrder": 3,
+    "chronologicalOrder": 5,
+    "blurb": "A symbol is selected, polished, and placed in the spotlight as rebellion becomes Panem's most provocative production. It is a grand finale about image, power, and the price of a perfect public performance.",
+    "spineStyle": "pearl",
+    "icon": "rose",
+    "height": 360,
+    "tassel": true
+  },
+  {
+    "id": "songbirds-snakes",
+    "title": "The Ballad of Songbirds and Snakes",
+    "year": 2020,
+    "publicationOrder": 4,
+    "seriesOrder": "prequel",
+    "chronologicalOrder": 1,
+    "blurb": "Travel back to the Games' earliest, most experimental season, when a young mentor discovers how charisma can turn a rough production into must-see television. Ambition has never looked so polished—or so perilous.",
+    "spineStyle": "emerald",
+    "icon": "snake",
+    "height": 394,
+    "tassel": false
+  },
+  {
+    "id": "sunrise-reaping",
+    "title": "Sunrise on the Reaping",
+    "year": 2025,
+    "publicationOrder": 5,
+    "seriesOrder": "prequel",
+    "chronologicalOrder": 2,
+    "blurb": "A new reaping dawns over a nation that has mastered the art of calling fear entertainment. Haymitch Abernathy enters the arena with wit, grit, and a remarkably compelling refusal to follow the program.",
+    "spineStyle": "champagne",
+    "icon": "wheat",
+    "height": 368,
+    "tassel": true
+  }
+]
