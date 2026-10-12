@@ -117,12 +117,14 @@ function CapitolArchive() {
               <AnimatePresence initial={false}>
                 {sortedBooks.map((book, index) => {
                   const isSelected = book.id === selectedId
+                  const selectedIndex = selectedId ? sortedBooks.findIndex((item) => item.id === selectedId) : -1
+                  const shelfShift = selectedId && !isSelected ? (index < selectedIndex ? -8 : 8) : 0
                   return (
                     <motion.article
                       key={book.id}
                       layout
                       initial={shouldReduceMotion ? false : { opacity: 0, y: 24 }}
-                      animate={{ opacity: isSelected ? .28 : 1, y: 0, scale: isSelected ? .98 : 1 }}
+                      animate={{ opacity: isSelected ? .46 : 1, x: isSelected ? -18 : shelfShift, y: isSelected ? -10 : 0, rotateY: isSelected ? -14 : 0, scale: isSelected ? .985 : 1 }}
                       exit={shouldReduceMotion ? undefined : { opacity: 0, y: 24 }}
                       transition={transition}
                       whileHover={shouldReduceMotion ? undefined : { y: -13, rotateY: -9, rotateX: 2 }}

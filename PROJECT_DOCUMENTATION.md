@@ -139,6 +139,15 @@ The card’s `READ THIS EDITION →` action was changed to open an Amazon search
 
 The interim retailer row was removed so the card now contains only the single Amazon-linked primary action.
 
+### 12. Shelf pick-off animation
+
+The selected-book interaction was refined to feel like someone is physically taking a volume from the shelf:
+
+- The selected spine shifts forward, lifts slightly, leans toward the viewer, and becomes the active volume.
+- Neighboring spines ease a few pixels away from the selected position so the extraction reads clearly without obscuring the rest of the shelf.
+- The official cover rises from below with a staged lift, rotation, scale-up, and settle into the non-modal pull-out view.
+- The animation remains disabled or instantaneous under `prefers-reduced-motion`.
+
 ## Current source structure
 
 ```text
@@ -164,6 +173,7 @@ public/
 - Use left/right arrow keys to move between books while a book is selected.
 - The pulled-out cover and detail card are intentionally non-modal so the other books remain readable.
 - The Amazon action is generated per selected title using a URL-encoded search query.
+- Selecting a book uses a shelf-removal motion: the spine pulls forward while the cover lifts, rotates, and settles into the quick view.
 
 ## Validation and delivery
 
@@ -197,6 +207,7 @@ public/
 | `d2a98a6` | Add book reading destination links |
 | `0e76d2e` | Link primary book action to Amazon |
 | `dc87ac6` | Remove retailer links from pullout card |
+| pending | Add shelf pick-off selection animation |
 
 ## Repository
 
