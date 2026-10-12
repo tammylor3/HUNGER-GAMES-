@@ -19,8 +19,6 @@ type Book = {
   coverPath: string
   fallbackCoverPath: string
 }
-type OrderMode = 'publication' | 'events'
-
 const seededBooks = books as Book[]
 const roman = ['I', 'II', 'III', 'IV', 'V']
 
@@ -53,7 +51,6 @@ function CapitolIcon({ name, className = '' }: { name: IconName; className?: str
 
 function CapitolArchive() {
   const shouldReduceMotion = useReducedMotion()
-  const [orderMode, setOrderMode] = useState<OrderMode>('publication')
   const [selectedId, setSelectedId] = useState<string | null>(null)
 
   useEffect(() => {
@@ -61,10 +58,8 @@ function CapitolArchive() {
   }, [])
 
   const sortedBooks = useMemo(() => {
-    const key = orderMode === 'publication' ? 'publicationOrder' : 'chronologicalOrder'
-    const direction = orderMode === 'publication' ? -1 : 1
-    return [...seededBooks].sort((a, b) => direction * (a[key] - b[key]))
-  }, [orderMode])
+    return [...seededBooks].sort((a, b) => b.publicationOrder - a.publicationOrder)
+  }, [])
 
   const selectedBook = sortedBooks.find((book) => book.id === selectedId) ?? null
   const transition = shouldReduceMotion
@@ -108,24 +103,13 @@ function CapitolArchive() {
       </div>
 
       <header className="cap-header">
-        <div className="cap-banner"><span>✦</span><b>PANEM CAPITOL LIBRARY</b><i>EST. YEAR 1</i><span>✦</span></div>
         <div className="cap-title-lockup">
-          <p className="cap-eyebrow">THE NATION'S MOST EXQUISITE COLLECTION</p>
           <h1>The Capitol <em>Archive</em><span className="cap-tooltip">A truly spectacular selection!</span></h1>
-          <p className="cap-subtitle">Five volumes. Presented for your pleasure.</p>
-        </div>
-        <div className="cap-header-rule"><span>◈</span><i /><span>◈</span></div>
-        <div className="cap-order-control" role="group" aria-label="Arrange the Capitol Archive">
-          <span>ARRANGE BY</span>
-          <button className={orderMode === 'publication' ? 'active' : ''} onClick={() => setOrderMode('publication')} aria-pressed={orderMode === 'publication'}>Order of Publication</button>
-          <b>/</b>
-          <button className={orderMode === 'events' ? 'active' : ''} onClick={() => setOrderMode('events')} aria-pressed={orderMode === 'events'}>Order of Events</button>
         </div>
       </header>
 
       <main className="cap-main">
         <section className="cap-stage" aria-label="The Capitol Archive bookshelf">
-          <div className="cap-stage-title"><i>COLLECTION I</i><span>FIVE VOLUMES</span></div>
           <div className="cap-halo" aria-hidden="true" />
           <div className="cap-shelf">
             <div className="cap-book-row" data-selected={selectedBook ? 'true' : 'false'}>
@@ -170,7 +154,6 @@ function CapitolArchive() {
             <div className="cap-shelf-surface" aria-hidden="true"><span /><b /></div>
             <div className="cap-reflection" aria-hidden="true" />
           </div>
-          <p className="cap-instruction">SELECT A VOLUME <span>✦</span> ARROWS TO EXPLORE</p>
 
           <AnimatePresence>
             {selectedBook && (
