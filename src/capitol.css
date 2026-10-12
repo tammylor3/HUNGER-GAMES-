@@ -1,4 +1,6 @@
-.cap-app { position:relative; isolation:isolate; min-height:100vh; overflow:hidden; color:#5e3857; background: radial-gradient(circle at 15% 12%, rgba(255,255,255,.95), transparent 23%), radial-gradient(circle at 84% 18%, rgba(255,255,255,.75), transparent 24%), linear-gradient(135deg,#f7d8e7 0%,#cfa8cc 40%,#eee1f1 72%,#f5d7d7 100%); font-family:Inter,"Helvetica Neue",Arial,sans-serif; font-weight:500; letter-spacing:-.015em; }
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;600&display=swap');
+
+.cap-app { position:relative; isolation:isolate; min-height:100vh; overflow:hidden; color:#5e3857; background: radial-gradient(circle at 15% 12%, rgba(255,255,255,.95), transparent 23%), radial-gradient(circle at 84% 18%, rgba(255,255,255,.75), transparent 24%), linear-gradient(135deg,#f7d8e7 0%,#cfa8cc 40%,#eee1f1 72%,#f5d7d7 100%); font-family:Manrope,"Helvetica Neue",Arial,sans-serif; font-weight:500; letter-spacing:-.015em; }
 .cap-app::before { content:""; position:absolute; inset:0; z-index:-3; opacity:.28; background-image: radial-gradient(rgba(255,255,255,.9) 0.7px, transparent .9px), radial-gradient(rgba(179,91,157,.22) .7px, transparent .9px); background-size:44px 44px, 79px 79px; background-position:7px 10px, 19px 23px; mix-blend-mode:soft-light; }
 .cap-app::after { content:""; position:absolute; inset:0; z-index:-2; pointer-events:none; background:linear-gradient(115deg, transparent 36%, rgba(255,255,255,.26) 48%, transparent 58%); background-size:230% 100%; animation: capSheen 15s ease-in-out infinite; opacity:.55; }
 @keyframes capSheen { 0%,32%{background-position:180% 0} 60%,100%{background-position:-80% 0} }
@@ -14,7 +16,7 @@
 .cap-banner i { padding-left:12px; border-left:1px solid rgba(173,104,145,.35); color:#b67a98; font-style:normal; font-weight:500; }
 .cap-title-lockup { position:relative; margin-top:25px; }
 .cap-eyebrow { margin:0 0 11px; color:#a26591; font:700 9px/1 ui-monospace,SFMono-Regular,Menlo,monospace; letter-spacing:.27em; }
-.cap-title-lockup h1 { position:relative; margin:0; color:#5e3857; font:500 clamp(43px,6vw,82px)/.91 Inter,"Helvetica Neue",Arial,sans-serif; letter-spacing:-.065em; text-shadow:0 2px rgba(255,255,255,.9); }
+.cap-title-lockup h1 { position:relative; margin:0; color:#5e3857; font:500 clamp(43px,6vw,82px)/.91 Manrope,"Helvetica Neue",Arial,sans-serif; letter-spacing:-.065em; text-shadow:0 2px rgba(255,255,255,.9); }
 .cap-title-lockup h1 em { color:#bb6caa; font-style:italic; }
 .cap-tooltip { position:absolute; bottom:-34px; left:50%; display:block; opacity:0; padding:7px 11px; border:1px solid rgba(183,111,158,.42); border-radius:4px; color:#7d4f76; background:rgba(255,250,247,.84); box-shadow:0 7px 17px rgba(139,75,130,.14); font:600 9px/1.2 ui-monospace,SFMono-Regular,Menlo,monospace; letter-spacing:.08em; white-space:nowrap; transform:translateX(-50%) translateY(-4px); transition:opacity .25s ease,transform .25s ease; pointer-events:none; }
 .cap-title-lockup h1:hover .cap-tooltip { opacity:1; transform:translateX(-50%) translateY(0); }
@@ -40,11 +42,11 @@
 .cap-book-shell { position:relative; width:100%; height:100%; transform-style:preserve-3d; transition:box-shadow .36s ease; box-shadow:12px 17px 28px rgba(112,52,111,.27),inset -2px 0 rgba(255,255,255,.5); }
 .cap-book-spine { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; padding:15px 9px 10px; overflow:hidden; border:1px solid rgba(255,255,255,.75); border-radius:8px 10px 9px 6px; transform:translateZ(18px); color:#ffedbf; backface-visibility:hidden; box-shadow:inset 6px 0 12px rgba(123,40,103,.25),inset -5px 0 7px rgba(255,255,255,.34); }
 .cap-book-spine::before { content:""; position:absolute; left:8px; top:12px; bottom:12px; width:1px; background:rgba(255,255,255,.65); box-shadow:1px 0 rgba(98,33,84,.22); }
-.cap-spine-publisher { position:relative; opacity:.86; font:700 7px/1 Inter,"Helvetica Neue",Arial,sans-serif; letter-spacing:.11em; writing-mode:vertical-rl; transform:rotate(180deg); }
-.cap-spine-title { position:relative; margin:auto 0; color:inherit; font:500 clamp(10px,1.12vw,14px)/1.02 Inter,"Helvetica Neue",Arial,sans-serif; letter-spacing:-.04em; writing-mode:vertical-rl; transform:rotate(180deg); text-align:left; }
+.cap-spine-publisher { position:relative; opacity:.86; font:600 7px/1 Manrope,"Helvetica Neue",Arial,sans-serif; letter-spacing:.11em; writing-mode:vertical-rl; transform:rotate(180deg); }
+.cap-spine-title { position:relative; margin:auto 0; color:inherit; font:500 clamp(10px,1.12vw,14px)/1.02 Manrope,"Helvetica Neue",Arial,sans-serif; letter-spacing:-.04em; writing-mode:vertical-rl; transform:rotate(180deg); text-align:left; }
 .cap-spine-footer { position:relative; display:flex; flex-direction:column; align-items:center; gap:4px; margin-top:auto; color:inherit; }
 .cap-spine-footer .cap-icon { width:20px; height:20px; margin:0; }
-.cap-spine-footer span { font:600 5px/1.05 Inter,"Helvetica Neue",Arial,sans-serif; letter-spacing:.08em; text-align:center; }
+.cap-spine-footer span { font:600 5px/1.05 Manrope,"Helvetica Neue",Arial,sans-serif; letter-spacing:.08em; text-align:center; }
 .cap-icon { position:relative; width:27px; height:27px; margin-top:13px; flex:0 0 auto; }
 .cap-book-spine .cap-icon { width:25px; height:25px; opacity:.95; }
 .cap-book-card:focus-visible .cap-book-spine { box-shadow:0 0 0 2px #d89cc7,0 0 22px rgba(255,227,246,.8); }
@@ -72,7 +74,7 @@
 .cap-official-cover { position:absolute; inset:0; z-index:0; width:100%; height:100%; display:block; object-fit:cover; object-position:center; }
 .cap-front-cover::after { content:""; position:absolute; inset:0; z-index:1; pointer-events:none; background:linear-gradient(135deg,rgba(255,255,255,.13),transparent 24%,transparent 76%,rgba(255,255,255,.13)); mix-blend-mode:screen; }
 .cap-official-cover + .cap-cover-frame { z-index:2; inset:12px; border-color:rgba(255,244,220,.88); opacity:.7; }
-.cap-cover-badge { position:absolute; left:22px; bottom:20px; z-index:3; padding:5px 8px; border:1px solid rgba(255,246,221,.76); color:#fff7e4; background:rgba(54,26,48,.42); font:600 7px/1 Inter,"Helvetica Neue",Arial,sans-serif; letter-spacing:.16em; }
+.cap-cover-badge { position:absolute; left:22px; bottom:20px; z-index:3; padding:5px 8px; border:1px solid rgba(255,246,221,.76); color:#fff7e4; background:rgba(54,26,48,.42); font:600 7px/1 Manrope,"Helvetica Neue",Arial,sans-serif; letter-spacing:.16em; }
 .cap-cover-overline,.cap-cover-series,.cap-cover-author { position:relative; z-index:1; font:700 8px/1.35 ui-monospace,SFMono-Regular,Menlo,monospace; letter-spacing:.18em; }
 .cap-cover-overline { opacity:.82; }
 .cap-cover-series { margin-top:auto; opacity:.9; }
@@ -89,7 +91,7 @@
 .cap-detail-card { width:min(360px,36vw); padding-top:12px; color:#684361; }
 .cap-detail-topline { display:flex; justify-content:space-between; color:#a76e8d; font:700 9px/1.2 ui-monospace,SFMono-Regular,Menlo,monospace; letter-spacing:.15em; }
 .cap-detail-kicker { margin:42px 0 13px; color:#9a668a; font:700 9px/1.2 ui-monospace,SFMono-Regular,Menlo,monospace; letter-spacing:.2em; }
-.cap-detail-card h2 { max-width:340px; margin:0; color:#613853; font:500 clamp(30px,3.8vw,53px)/.93 Inter,"Helvetica Neue",Arial,sans-serif; letter-spacing:-.065em; }
+.cap-detail-card h2 { max-width:340px; margin:0; color:#613853; font:500 clamp(30px,3.8vw,53px)/.93 Manrope,"Helvetica Neue",Arial,sans-serif; letter-spacing:-.065em; }
 .cap-detail-rule { width:100%; height:1px; margin:27px 0 20px; background:linear-gradient(90deg,rgba(189,119,157,.75),transparent); }
 .cap-detail-blurb { max-width:335px; margin:0; color:#73586c; font:400 14px/1.65 Georgia,"Times New Roman",serif; }
 .cap-enter-link { display:inline-flex; align-items:center; gap:14px; margin-top:27px; padding:11px 14px; border:1px solid rgba(182,124,143,.65); color:#945c7d; background:linear-gradient(135deg,rgba(255,251,230,.76),rgba(255,238,212,.34)); box-shadow:inset 0 1px rgba(255,255,255,.95),0 4px 13px rgba(126,70,113,.1); text-decoration:none; font:700 10px/1.2 ui-monospace,SFMono-Regular,Menlo,monospace; letter-spacing:.13em; transition:gap .25s ease,box-shadow .25s ease; }
