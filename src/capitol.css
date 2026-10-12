@@ -26,8 +26,8 @@
 .cap-order-control button:hover,.cap-order-control button.active { color:#8b417b; text-shadow:0 0 9px rgba(255,255,255,.8); }
 .cap-order-control b { color:#ce92b4; font-weight:400; }
 .cap-main { position:relative; z-index:1; width:min(1250px,calc(100% - 34px)); margin:0 auto; }
-.cap-stage { position:relative; min-height:560px; padding:52px 30px 49px; border:1px solid rgba(167,97,143,.35); border-top:0; border-radius:0 0 4px 4px; background:linear-gradient(180deg,rgba(255,252,254,.33),rgba(255,255,255,.15)); box-shadow:0 30px 70px rgba(133,74,129,.18), inset 0 1px rgba(255,255,255,.82); }
-.cap-stage::before { content:""; position:absolute; inset:11px; border:1px solid rgba(182,115,155,.27); border-top:0; pointer-events:none; }
+.cap-stage { position:relative; min-height:560px; padding:52px 30px 49px; border:0; border-radius:0; background:linear-gradient(180deg,rgba(255,252,254,.33),rgba(255,255,255,.15)); box-shadow:0 30px 70px rgba(133,74,129,.18), inset 0 1px rgba(255,255,255,.82); }
+.cap-stage::before { display:none; }
 .cap-stage-title { position:absolute; left:22px; right:22px; top:15px; display:flex; justify-content:space-between; color:#a46b92; font:700 8px/1.2 ui-monospace,SFMono-Regular,Menlo,monospace; letter-spacing:.18em; }
 .cap-stage-title i { font-style:normal; color:#bf8eaa; }
 .cap-halo { position:absolute; left:10%; right:10%; bottom:105px; height:260px; border-radius:50%; background:radial-gradient(ellipse,rgba(255,255,255,.9),rgba(244,184,205,.23) 44%,transparent 72%); filter:blur(12px); pointer-events:none; }
