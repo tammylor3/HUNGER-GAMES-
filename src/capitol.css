@@ -116,7 +116,7 @@
 .cap-order-control,.cap-order-control button { color:#967541; }
 .cap-order-control button:hover,.cap-order-control button.active { color:#765a26; }
 .cap-order-control b { color:#c4a76d; }
-.cap-stage { border-color:rgba(176,137,63,.34); background:linear-gradient(180deg,rgba(255,255,255,.69),rgba(255,252,242,.38)); }
+.cap-stage { border-color:transparent; background:transparent; box-shadow:none; }
 .cap-stage-title,.cap-instruction { color:#9a7b43; }
 .cap-stage-title i { color:#b49a6d; }
 .cap-halo { background:radial-gradient(ellipse,rgba(255,255,255,.96),rgba(239,211,150,.3) 44%,transparent 72%); }
