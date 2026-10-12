@@ -21,3 +21,7 @@ pnpm build
 ```
 
 Seed data lives in `src/data/books.json` and `src/data/capitol-books.json`; the route manifest is `public/manus-routes.json`.
+
+## Documentation
+
+See [`PROJECT_DOCUMENTATION.md`](./PROJECT_DOCUMENTATION.md) for the complete record of the requested design changes, visual revisions, interaction updates, source structure, validation notes, and commit timeline.
