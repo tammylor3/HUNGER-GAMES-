@@ -1,0 +1,62 @@
+[
+  {
+    "id": "hunger-games",
+    "title": "The Hunger Games",
+    "year": 2008,
+    "publicationOrder": 1,
+    "seriesOrder": 1,
+    "chronologicalOrder": 3,
+    "blurb": "Katniss Everdeen is pulled into a televised contest where survival becomes a public spectacle. Her instincts, alliances, and one impossible act of defiance begin to unsettle the rules of Panem.",
+    "spineColor": "coal",
+    "icon": "mockingjay",
+    "height": 356
+  },
+  {
+    "id": "catching-fire",
+    "title": "Catching Fire",
+    "year": 2009,
+    "publicationOrder": 2,
+    "seriesOrder": 2,
+    "chronologicalOrder": 4,
+    "blurb": "The Capitol wants a victory tour, but the districts are reading a different message in Katniss's survival. As pressure builds, old games return with sharper stakes and fewer safe choices.",
+    "spineColor": "ember",
+    "icon": "arrow",
+    "height": 388
+  },
+  {
+    "id": "mockingjay",
+    "title": "Mockingjay",
+    "year": 2010,
+    "publicationOrder": 3,
+    "seriesOrder": 3,
+    "chronologicalOrder": 5,
+    "blurb": "With Panem in open conflict, Katniss becomes a symbol whose image travels farther than she can. The final movement of the rebellion asks what freedom costs after the cameras turn away.",
+    "spineColor": "slate",
+    "icon": "ember",
+    "height": 372
+  },
+  {
+    "id": "songbirds-snakes",
+    "title": "The Ballad of Songbirds and Snakes",
+    "year": 2020,
+    "publicationOrder": 4,
+    "seriesOrder": "prequel",
+    "chronologicalOrder": 1,
+    "blurb": "Decades before Katniss, a young Coriolanus Snow is assigned to mentor a tribute in a Games still finding its shape. Ambition, performance, and a dangerous bond reveal the roots of a future regime.",
+    "spineColor": "emerald",
+    "icon": "snake",
+    "height": 402
+  },
+  {
+    "id": "sunrise-reaping",
+    "title": "Sunrise on the Reaping",
+    "year": 2025,
+    "publicationOrder": 5,
+    "seriesOrder": "prequel",
+    "chronologicalOrder": 2,
+    "blurb": "On the morning of a pivotal reaping, Haymitch Abernathy is drawn into a spectacle designed to make fear feel ordinary. The arena becomes a pressure chamber for loyalty, memory, and quiet resistance.",
+    "spineColor": "amber",
+    "icon": "wheat",
+    "height": 380
+  }
+]
