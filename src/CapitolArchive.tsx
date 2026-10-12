@@ -62,7 +62,8 @@ function CapitolArchive() {
 
   const sortedBooks = useMemo(() => {
     const key = orderMode === 'publication' ? 'publicationOrder' : 'chronologicalOrder'
-    return [...seededBooks].sort((a, b) => a[key] - b[key])
+    const direction = orderMode === 'publication' ? -1 : 1
+    return [...seededBooks].sort((a, b) => direction * (a[key] - b[key]))
   }, [orderMode])
 
   const selectedBook = sortedBooks.find((book) => book.id === selectedId) ?? null
@@ -153,9 +154,12 @@ function CapitolArchive() {
                       <div className="cap-book-shell">
                         <div className="cap-page-edge" aria-hidden="true" />
                         <div className="cap-book-spine">
-                          <span className="cap-spine-series">{book.seriesOrder === 'prequel' ? 'PREQUEL' : `VOLUME ${roman[book.seriesOrder - 1]}`}</span>
+                          <span className="cap-spine-publisher">COLLINS</span>
                           <span className="cap-spine-title">{book.title}</span>
-                          <CapitolIcon name={book.icon} className={book.icon === 'mockingjay' ? 'cap-mockingjay-mark' : ''} />
+                          <div className="cap-spine-footer">
+                            <CapitolIcon name={book.icon} className={book.icon === 'mockingjay' ? 'cap-mockingjay-mark' : ''} />
+                            <span>SCHOLASTIC<br />PRESS</span>
+                          </div>
                         </div>
                       </div>
                     </motion.article>
