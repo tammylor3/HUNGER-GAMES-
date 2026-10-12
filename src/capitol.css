@@ -57,9 +57,9 @@
 .cap-pearl .cap-book-spine { color:#fffdf7; background:linear-gradient(120deg,#77bfe1,#a8d8eb 53%,#5c9fcb); }
 .cap-emerald .cap-book-spine { color:#f5e9b7; background:linear-gradient(130deg,#073c31,#17664e 54%,#082c28); }
 .cap-champagne .cap-book-spine { color:#fff3cf; background:linear-gradient(130deg,#342058,#583b78 54%,#22153d); }
-.cap-shelf-surface { position:absolute; left:2%; right:2%; bottom:28px; height:22px; border:1px solid rgba(183,132,54,.75); border-radius:3px; background:linear-gradient(180deg,rgba(255,255,255,.86),rgba(229,226,232,.86) 42%,rgba(214,194,211,.74)); box-shadow:0 8px 13px rgba(105,59,101,.22),0 -3px 18px rgba(255,217,237,.8); transform:perspective(780px) rotateX(47deg); }
+.cap-shelf-surface { position:absolute; left:2%; right:2%; bottom:28px; height:22px; border:1px solid rgba(183,132,54,.75); border-radius:3px; background:linear-gradient(180deg,rgba(255,255,255,.94),rgba(235,235,231,.9) 42%,rgba(214,211,201,.82)); box-shadow:0 8px 13px rgba(92,84,70,.18),0 -3px 18px rgba(255,248,221,.85); transform:perspective(780px) rotateX(47deg); }
 .cap-shelf-surface span { display:block; height:2px; margin:5px 3%; background:linear-gradient(90deg,transparent,#d7a24f,transparent); box-shadow:0 0 5px #fff; }
-.cap-shelf-surface b { position:absolute; left:3%; right:3%; bottom:4px; display:block; height:1px; background:rgba(158,102,147,.4); }
+.cap-shelf-surface b { position:absolute; left:3%; right:3%; bottom:4px; display:block; height:1px; background:rgba(158,125,64,.42); }
 .cap-reflection { position:absolute; left:12%; right:12%; bottom:4px; height:42px; opacity:.25; background:linear-gradient(180deg,rgba(255,255,255,.7),transparent); filter:blur(12px); transform:perspective(300px) rotateX(56deg); }
 .cap-instruction { position:absolute; bottom:10px; left:0; right:0; margin:0; color:#a67397; text-align:center; font:700 8px/1.2 ui-monospace,SFMono-Regular,Menlo,monospace; letter-spacing:.18em; }
 .cap-instruction span { padding:0 7px; color:#d09c48; }
