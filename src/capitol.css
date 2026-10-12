@@ -49,11 +49,11 @@
 .cap-page-edge { position:absolute; top:5px; right:-11px; bottom:5px; width:16px; border-radius:0 5px 5px 0; transform:rotateY(73deg) translateZ(2px); transform-origin:left center; background:repeating-linear-gradient(0deg,#d6b76e 0 2px,#fff4c7 2px 3px,#bd9344 3px 4px); box-shadow:2px 0 4px rgba(130,74,51,.25); }
 .cap-tassel { position:absolute; z-index:2; top:-4px; right:8px; width:1px; height:48px; background:#c48f3d; opacity:.9; transform:rotate(5deg); }
 .cap-tassel::before { content:""; position:absolute; top:34px; left:-4px; width:9px; height:13px; border-radius:0 0 5px 5px; background:linear-gradient(90deg,#a8732e,#f1cf7a,#ad7731); box-shadow:0 1px 3px rgba(98,51,17,.25); }
-.cap-magenta .cap-book-spine { color:#ffefc6; background:linear-gradient(125deg,#b51674,#e143a0 55%,#8f2f80); }
-.cap-sunset .cap-book-spine { color:#fff1ce; background:linear-gradient(130deg,#e9843c,#e85577 53%,#af4d92); }
-.cap-pearl .cap-book-spine { color:#ac6a86; background:linear-gradient(120deg,#fff8fa,#f9e5ee 53%,#e4c5d7); }
-.cap-emerald .cap-book-spine { color:#f4eacb; background:linear-gradient(130deg,#075b52,#1e9b8c 54%,#0d5b63); }
-.cap-champagne .cap-book-spine { color:#9b5876; background:linear-gradient(130deg,#d9b468,#f5dfaa 54%,#dca8b6); }
+.cap-magenta .cap-book-spine { color:#f4cf68; background:linear-gradient(125deg,#151515,#282326 55%,#0b0b0b); }
+.cap-sunset .cap-book-spine { color:#fff0d2; background:linear-gradient(130deg,#8e261e,#c64b2d 53%,#6d171e); }
+.cap-pearl .cap-book-spine { color:#fffdf7; background:linear-gradient(120deg,#77bfe1,#a8d8eb 53%,#5c9fcb); }
+.cap-emerald .cap-book-spine { color:#f5e9b7; background:linear-gradient(130deg,#073c31,#17664e 54%,#082c28); }
+.cap-champagne .cap-book-spine { color:#fff3cf; background:linear-gradient(130deg,#342058,#583b78 54%,#22153d); }
 .cap-shelf-surface { position:absolute; left:2%; right:2%; bottom:28px; height:22px; border:1px solid rgba(183,132,54,.75); border-radius:3px; background:linear-gradient(180deg,rgba(255,255,255,.86),rgba(229,226,232,.86) 42%,rgba(214,194,211,.74)); box-shadow:0 8px 13px rgba(105,59,101,.22),0 -3px 18px rgba(255,217,237,.8); transform:perspective(780px) rotateX(47deg); }
 .cap-shelf-surface span { display:block; height:2px; margin:5px 3%; background:linear-gradient(90deg,transparent,#d7a24f,transparent); box-shadow:0 0 5px #fff; }
 .cap-shelf-surface b { position:absolute; left:3%; right:3%; bottom:4px; display:block; height:1px; background:rgba(158,102,147,.4); }
