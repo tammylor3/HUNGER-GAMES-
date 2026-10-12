@@ -22,6 +22,7 @@ export default function CapitolPullout({ book, shouldReduceMotion, onClose }: Ca
     ? { duration: 0 }
     : { type: 'spring' as const, stiffness: 260, damping: 24, mass: 0.85 }
   const searchTerm = encodeURIComponent(`${book?.title ?? ''} Suzanne Collins`)
+  const amazonUrl = `https://www.amazon.com/s?k=${searchTerm}`
 
   return (
     <AnimatePresence>
@@ -67,9 +68,8 @@ export default function CapitolPullout({ book, shouldReduceMotion, onClose }: Ca
               <h2>{book.title}</h2>
               <div className="cap-pullout-rule" />
               <p>{book.blurb}</p>
-              <a href={`/capitol/about/${book.id}`} onClick={(event) => event.preventDefault()}>READ THIS EDITION <span>→</span></a>
+              <a href={amazonUrl} target="_blank" rel="noreferrer">READ THIS EDITION <span>→</span></a>
               <div className="cap-read-elsewhere">
-                <span>ALSO AVAILABLE VIA</span>
                 <div className="cap-read-elsewhere-links">
                   <a href={`https://bookshop.org/search?keywords=${searchTerm}`} target="_blank" rel="noreferrer">BOOKSHOP</a>
                   <a href={`https://www.barnesandnoble.com/s/${searchTerm}`} target="_blank" rel="noreferrer">B&amp;N</a>
