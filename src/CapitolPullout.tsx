@@ -21,6 +21,7 @@ export default function CapitolPullout({ book, shouldReduceMotion, onClose }: Ca
   const transition = shouldReduceMotion
     ? { duration: 0 }
     : { type: 'spring' as const, stiffness: 260, damping: 24, mass: 0.85 }
+  const searchTerm = encodeURIComponent(`${book?.title ?? ''} Suzanne Collins`)
 
   return (
     <AnimatePresence>
@@ -67,6 +68,15 @@ export default function CapitolPullout({ book, shouldReduceMotion, onClose }: Ca
               <div className="cap-pullout-rule" />
               <p>{book.blurb}</p>
               <a href={`/capitol/about/${book.id}`} onClick={(event) => event.preventDefault()}>READ THIS EDITION <span>→</span></a>
+              <div className="cap-read-elsewhere">
+                <span>ALSO AVAILABLE VIA</span>
+                <div className="cap-read-elsewhere-links">
+                  <a href={`https://bookshop.org/search?keywords=${searchTerm}`} target="_blank" rel="noreferrer">BOOKSHOP</a>
+                  <a href={`https://www.barnesandnoble.com/s/${searchTerm}`} target="_blank" rel="noreferrer">B&amp;N</a>
+                  <a href={`https://www.amazon.com/s?k=${searchTerm}`} target="_blank" rel="noreferrer">AMAZON</a>
+                  <a href={`https://www.kobo.com/search?query=${searchTerm}`} target="_blank" rel="noreferrer">KOBO</a>
+                </div>
+              </div>
             </motion.aside>
 
             <button className="cap-pullout-close" onClick={onClose} aria-label="Close quick view">×</button>

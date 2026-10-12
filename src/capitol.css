@@ -176,6 +176,11 @@
 .cap-pullout-card p { margin:0; color:#78694f; font:500 11px/1.5 Manrope,"Helvetica Neue",Arial,sans-serif; letter-spacing:-.012em; }
 .cap-pullout-card a { display:inline-flex; align-items:center; gap:9px; margin-top:13px; color:#866327; font:600 8px/1.2 Manrope,"Helvetica Neue",Arial,sans-serif; letter-spacing:.1em; text-decoration:none; }
 .cap-pullout-card a span { color:#b28a3e; font-size:14px; }
+.cap-read-elsewhere { margin-top:12px; padding-top:9px; border-top:1px solid rgba(177,137,61,.24); }
+.cap-read-elsewhere > span { display:block; color:#a28a5a; font:600 6px/1.2 Manrope,"Helvetica Neue",Arial,sans-serif; letter-spacing:.12em; }
+.cap-read-elsewhere-links { display:flex; flex-wrap:wrap; gap:10px; margin-top:7px; }
+.cap-read-elsewhere-links a { margin:0; color:#77602e; font-size:7px; letter-spacing:.08em; }
+.cap-read-elsewhere-links a:hover,.cap-read-elsewhere-links a:focus-visible { color:#b1842c; text-decoration:underline; outline:none; }
 .cap-pullout-close { position:absolute; top:20px; right:18px; width:25px; height:25px; border:1px solid rgba(177,137,61,.58); border-radius:50%; color:#876426; background:rgba(255,255,255,.82); cursor:pointer; font:500 18px/1 Manrope,"Helvetica Neue",Arial,sans-serif; pointer-events:auto; transition:transform .25s ease,background .25s ease; }
 .cap-pullout-close:hover,.cap-pullout-close:focus-visible { background:#fff7df; transform:rotate(90deg); outline:none; }
 
@@ -215,6 +220,9 @@
   .cap-pullout-card h2 { margin-top:9px; font-size:21px; }
   .cap-pullout-card p { font-size:10px; line-height:1.42; }
   .cap-pullout-card a { margin-top:10px; font-size:7px; }
+  .cap-read-elsewhere { margin-top:9px; padding-top:7px; }
+  .cap-read-elsewhere-links { gap:7px; margin-top:6px; }
+  .cap-read-elsewhere-links a { font-size:6px; }
   .cap-pullout-close { top:-32px; right:0; }
   .cap-selection-layer { position:fixed; inset:0; align-items:flex-end; padding:0; }
   .cap-selection-layout { align-items:flex-start; justify-content:flex-start; flex-direction:column; gap:0; width:100%; max-height:min(89vh,710px); padding:24px 26px 25px; overflow:auto; border-top:1px solid rgba(181,115,152,.5); background:linear-gradient(160deg,#f9e7ef,#edd9ea 76%); box-shadow:0 -22px 70px rgba(116,55,104,.3); }
