@@ -28,8 +28,8 @@
 .cap-main { position:relative; z-index:1; width:min(1250px,calc(100% - 34px)); margin:0 auto; }
 .cap-stage { position:relative; min-height:560px; padding:52px 30px 49px; border:0; border-radius:0; background:transparent; box-shadow:none; }
 .cap-stage::before { display:none; }
-.cap-stage-title { position:absolute; left:22px; right:22px; top:15px; display:flex; justify-content:space-between; color:#a46b92; font:700 8px/1.2 ui-monospace,SFMono-Regular,Menlo,monospace; letter-spacing:.18em; }
-.cap-stage-title i { font-style:normal; color:#bf8eaa; }
+.cap-stage-title { position:absolute; left:22px; right:22px; top:15px; display:flex; justify-content:flex-end; color:#a46b92; font:700 8px/1.2 ui-monospace,SFMono-Regular,Menlo,monospace; letter-spacing:.18em; }
+.cap-stage-title i { position:absolute; left:50%; font-style:normal; color:#bf8eaa; transform:translateX(-50%); }
 .cap-halo { position:absolute; left:10%; right:10%; bottom:105px; height:260px; border-radius:50%; background:radial-gradient(ellipse,rgba(255,255,255,.9),rgba(244,184,205,.23) 44%,transparent 72%); filter:blur(12px); pointer-events:none; }
 .cap-shelf { position:relative; z-index:1; min-height:422px; padding:22px 14px 0; perspective:1500px; }
 .cap-book-row { display:flex; align-items:flex-end; justify-content:center; gap:clamp(4px,.7vw,10px); min-height:420px; padding:0 clamp(4px,3vw,44px) 31px; transition:transform .45s ease,filter .45s ease; }

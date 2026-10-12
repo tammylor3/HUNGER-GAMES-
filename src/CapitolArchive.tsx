@@ -125,7 +125,7 @@ function CapitolArchive() {
 
       <main className="cap-main">
         <section className="cap-stage" aria-label="The Capitol Archive bookshelf">
-          <div className="cap-stage-title"><span>THE CAPITOL ARCHIVE</span><i>COLLECTION I</i><span>FIVE VOLUMES</span></div>
+          <div className="cap-stage-title"><i>COLLECTION I</i><span>FIVE VOLUMES</span></div>
           <div className="cap-halo" aria-hidden="true" />
           <div className="cap-shelf">
             <div className="cap-book-row" data-selected={selectedBook ? 'true' : 'false'}>
