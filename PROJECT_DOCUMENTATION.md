@@ -145,8 +145,8 @@ The supplied `Build.docx` specification was implemented as a focused visual rede
 
 - The supplied white-and-gold Capitol cityscape is now a fixed full-viewport background with a light blur, boosted saturation, and a warm cream-gold readability tint.
 - The title uses a light white treatment with `Archive` in `#f3c96b` and a soft dark shadow.
-- A liquid-glass display control switches between a horizontal **FLAT STACK** and an **UPRIGHT SHELF** view.
-- Flat stack order is publication order from top to bottom: *The Hunger Games*, *Catching Fire*, *Mockingjay*, *The Ballad of Songbirds and Snakes*, and *Sunrise on the Reaping*.
+- The header now uses a minimal `THE CAPITOL ARCHIVE` wordmark and a reference-inspired centered **Book Corner** introduction with a rule, supporting copy, and collection prompt.
+- The books remain in a centered vertical upright shelf arrangement with rectangular hardcover spines.
 - The book spines were redesigned as matte printed-cloth rectangles with crisp corners, subtle edge wear, dark lower shadows, wide condensed display lettering, colored `COLLINS` marks, rotated `SCHOLASTIC PRESS` labels, and inline SVG arrows, snake, and sunrise ornaments.
 - The book spines intentionally avoid glass, glow, blur, and soft UI gradients; only surrounding UI uses liquid-glass treatment.
 - The shelf/ledge, footer pill, view toggle, and detail card use translucent frosted styling with bright top-edge highlights and soft shadows.
@@ -156,7 +156,7 @@ The two supplied reference images are stored locally in `public/references/` so 
 
 ### 13. Vertical shelf default and image loading optimization
 
-The Capitol page now opens in the original vertical upright shelf view. The flat horizontal stack remains available through the display toggle, but it is no longer the initial presentation. To reduce visible loading lag, the cityscape and local cover fallbacks are preloaded in the page, cover images use asynchronous decoding and high fetch priority when selected, and the local `/covers/` assets load before managed remote storage paths.
+The Capitol page now opens in the centered vertical upright shelf view. The previous flat horizontal stack controls and extra footer copy were removed to match the supplied reference composition. To reduce visible loading lag, the cityscape and local cover fallbacks are preloaded in the page, cover images use asynchronous decoding and high fetch priority when selected, and the local `/covers/` assets load before managed remote storage paths.
 
 ### 12. Shelf pick-off animation
 
