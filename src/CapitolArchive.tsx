@@ -123,7 +123,7 @@ function CapitolArchive() {
                       transition={shouldReduceMotion ? { duration: 0 } : { type: 'spring', stiffness: 180, damping: 25, mass: .82 }}
                       whileHover={shouldReduceMotion ? undefined : { y: -9, rotateY: -4, rotateX: 1 }}
                       className={`cap-book-card cap-${book.spineStyle} ${isSelected ? 'is-selected' : ''}`}
-                      style={{ '--cap-book-height': `${book.height - 175}px`, '--cap-book-index': index } as CSSProperties}
+                      style={{ '--cap-book-height': `${book.height}px`, '--cap-book-index': index } as CSSProperties}
                       tabIndex={0}
                       role="button"
                       aria-label={`Open ${book.title}, ${book.year}`}
@@ -131,12 +131,16 @@ function CapitolArchive() {
                       onClick={() => selectBook(book)}
                       onKeyDown={(event) => onSpineKeyDown(event, book)}
                     >
+                      <div className="cap-tassel" aria-hidden="true" />
                       <div className="cap-book-shell">
+                        <div className="cap-page-edge" aria-hidden="true" />
                         <div className="cap-book-spine">
                           <span className="cap-spine-publisher">COLLINS</span>
                           <span className="cap-spine-title">{book.title}</span>
-                          <SpineOrnament book={book} />
-                          <span className="cap-spine-imprint">SCHOLASTIC<br />PRESS</span>
+                          <div className="cap-spine-footer">
+                            <CapitolIcon name={book.icon} className={book.icon === 'mockingjay' ? 'cap-mockingjay-mark' : ''} />
+                            <span>SCHOLASTIC<br />PRESS</span>
+                          </div>
                         </div>
                       </div>
                     </motion.article>

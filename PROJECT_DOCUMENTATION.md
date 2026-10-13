@@ -147,8 +147,8 @@ The supplied `Build.docx` specification was implemented as a focused visual rede
 - The title uses a light white treatment with `Archive` in `#f3c96b` and a soft dark shadow.
 - The header now uses a minimal `THE CAPITOL ARCHIVE` wordmark and a reference-inspired centered **Book Corner** introduction with a rule, supporting copy, and collection prompt.
 - The books remain in a centered vertical upright shelf arrangement with rectangular hardcover spines.
-- The book spines were redesigned as matte printed-cloth rectangles with crisp corners, subtle edge wear, dark lower shadows, wide condensed display lettering, colored `COLLINS` marks, rotated `SCHOLASTIC PRESS` labels, and inline SVG arrows, snake, and sunrise ornaments.
-- The book spines intentionally avoid glass, glow, blur, and soft UI gradients; only surrounding UI uses liquid-glass treatment.
+- The book spines retain the earlier Capitol treatment: tall rounded hardcover silhouettes, jewel-tone gradients, page-edge thickness, vertical Manrope titles, publisher marks, tassels, and the original book icons.
+- The spine-reference redesign was intentionally reverted without changing the newer cityscape background, Book Corner header, centered positioning, pull-out interaction, or image-loading optimization.
 - The shelf/ledge, footer pill, view toggle, and detail card use translucent frosted styling with bright top-edge highlights and soft shadows.
 - Existing pull-out cover, detail card, Amazon action, click-outside close, Escape key, arrow-key navigation, responsive behavior, and reduced-motion support remain intact.
 
@@ -158,7 +158,7 @@ The two supplied reference images are stored locally in `public/references/` so 
 
 The Capitol page now opens in the centered vertical upright shelf view. The previous flat horizontal stack controls and extra footer copy were removed to match the supplied reference composition. To reduce visible loading lag, the cityscape and local cover fallbacks are preloaded in the page, cover images use asynchronous decoding and high fetch priority when selected, and the local `/covers/` assets load before managed remote storage paths.
 
-The upright shelf was subsequently compacted so the rectangular spines sit smaller and more centrally. Each title is now kept as one continuous rotated line instead of wrapping into multiple stacked lines.
+The upright shelf was subsequently restored to the earlier tall hardcover proportions and original vertical title treatment. The current header, Book Corner introduction, centered shelf positioning, and performance improvements remain in place.
 
 ### 12. Shelf pick-off animation
 
