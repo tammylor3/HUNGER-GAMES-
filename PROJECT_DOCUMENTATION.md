@@ -160,6 +160,8 @@ The Capitol page now opens in the centered vertical upright shelf view. The prev
 
 The upright shelf was subsequently restored to the earlier tall hardcover proportions and original vertical title treatment. The current header, Book Corner introduction, centered shelf positioning, and performance improvements remain in place.
 
+The Capitol Archive wordmark and all Book Corner introduction copy now use a polished gold color with a restrained metallic glow instead of white text.
+
 ### 12. Shelf pick-off animation
 
 The selected-book interaction was refined to feel like someone is physically taking a volume from the shelf:
