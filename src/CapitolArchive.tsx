@@ -55,9 +55,20 @@ function SpineOrnament({ book }: { book: Book }) {
 function CapitolArchive() {
   const shouldReduceMotion = useReducedMotion()
   const [selectedId, setSelectedId] = useState<string | null>(null)
-  const [viewMode, setViewMode] = useState<ViewMode>('stack')
+  const [viewMode, setViewMode] = useState<ViewMode>('upright')
 
   useEffect(() => { document.title = 'The Capitol Archive' }, [])
+
+  useEffect(() => {
+    const assetUrls = ['/references/capitol-cityscape.jpeg', ...seededBooks.map((book) => book.fallbackCoverPath)]
+    const images = assetUrls.map((url) => {
+      const image = new Image()
+      image.decoding = 'async'
+      image.src = url
+      return image
+    })
+    return () => images.forEach((image) => { image.src = '' })
+  }, [])
 
   const sortedBooks = useMemo(() => [...seededBooks].sort((a, b) => a.publicationOrder - b.publicationOrder), [])
   const selectedBook = sortedBooks.find((book) => book.id === selectedId) ?? null

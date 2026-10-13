@@ -48,9 +48,15 @@ export default function CapitolPullout({ book, shouldReduceMotion, onClose }: Ca
             >
               <div className="cap-pullout-cover">
                 <img
-                  src={book.coverPath}
+                  src={book.fallbackCoverPath}
                   alt={`${book.title} official cover`}
-                  onError={(event) => { event.currentTarget.src = book.fallbackCoverPath }}
+                  decoding="async"
+                  fetchPriority="high"
+                  onError={(event) => {
+                    if (event.currentTarget.dataset.remoteAttempted) return
+                    event.currentTarget.dataset.remoteAttempted = 'true'
+                    event.currentTarget.src = book.coverPath
+                  }}
                 />
                 <span>OFFICIAL COVER</span>
               </div>

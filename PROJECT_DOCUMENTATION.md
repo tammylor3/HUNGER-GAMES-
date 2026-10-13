@@ -154,6 +154,10 @@ The supplied `Build.docx` specification was implemented as a focused visual rede
 
 The two supplied reference images are stored locally in `public/references/` so the redesigned page does not depend on remote background assets.
 
+### 13. Vertical shelf default and image loading optimization
+
+The Capitol page now opens in the original vertical upright shelf view. The flat horizontal stack remains available through the display toggle, but it is no longer the initial presentation. To reduce visible loading lag, the cityscape and local cover fallbacks are preloaded in the page, cover images use asynchronous decoding and high fetch priority when selected, and the local `/covers/` assets load before managed remote storage paths.
+
 ### 12. Shelf pick-off animation
 
 The selected-book interaction was refined to feel like someone is physically taking a volume from the shelf:
