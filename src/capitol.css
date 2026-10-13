@@ -15,7 +15,7 @@ html[data-archive='capitol'] body { font-family:Manrope,Arial,sans-serif; color:
 .cap-main { width:min(1200px,calc(100% - 34px)); margin:0 auto; }
 .cap-stage { position:relative; min-height:600px; display:flex; flex-direction:column; justify-content:flex-start; padding:18px 0 56px; }
 
-.cap-intro { width:100%; box-sizing:border-box; padding:22px 5.8% 18px; border-top:1px solid rgba(255,255,255,.82); border-bottom:1px solid rgba(255,255,255,.78); color:#fffdf4; text-align:left; background:rgba(25,19,10,.24); box-shadow:inset 0 1px rgba(255,255,255,.5),0 4px 18px rgba(37,25,7,.16); backdrop-filter:blur(4px); text-shadow:0 1px 0 rgba(255,255,255,.62),0 2px 3px rgba(25,18,7,.92),0 0 8px rgba(255,255,255,.25); }
+.cap-intro { width:100%; box-sizing:border-box; padding:22px 5.8% 18px; border:0; color:#fffdf4; text-align:left; background:rgba(25,19,10,.24); box-shadow:inset 0 1px rgba(255,255,255,.18),0 4px 18px rgba(37,25,7,.16); backdrop-filter:blur(4px); text-shadow:0 1px 0 rgba(255,255,255,.62),0 2px 3px rgba(25,18,7,.92),0 0 8px rgba(255,255,255,.25); }
 .cap-intro h1 { margin:0; color:#fffdf4; font:500 clamp(23px,3vw,34px)/1 Manrope,Arial,sans-serif; letter-spacing:-.06em; -webkit-text-stroke:.2px rgba(255,255,255,.78); text-shadow:0 1px 0 rgba(255,255,255,.82),0 2px 3px rgba(25,18,7,.94),0 0 10px rgba(255,255,255,.28); }
 .cap-intro-rule { width:100%; height:1px; margin:16px 0 14px; background:rgba(255,255,255,.82); box-shadow:0 1px 0 rgba(255,255,255,.66),0 0 8px rgba(255,255,255,.34); }
 .cap-intro p { max-width:900px; margin:0; color:rgba(255,253,244,.96); font:500 11px/1.55 Manrope,Arial,sans-serif; letter-spacing:-.01em; text-shadow:0 1px 0 rgba(255,255,255,.58),0 2px 3px rgba(25,18,7,.9); }
