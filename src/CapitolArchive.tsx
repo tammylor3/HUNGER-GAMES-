@@ -123,7 +123,7 @@ function CapitolArchive() {
                       transition={shouldReduceMotion ? { duration: 0 } : { type: 'spring', stiffness: 180, damping: 25, mass: .82 }}
                       whileHover={shouldReduceMotion ? undefined : { y: -9, rotateY: -4, rotateX: 1 }}
                       className={`cap-book-card cap-${book.spineStyle} ${isSelected ? 'is-selected' : ''}`}
-                      style={{ '--cap-book-height': `${book.height - 112}px`, '--cap-book-index': index } as CSSProperties}
+                      style={{ '--cap-book-height': `${book.height - 175}px`, '--cap-book-index': index } as CSSProperties}
                       tabIndex={0}
                       role="button"
                       aria-label={`Open ${book.title}, ${book.year}`}

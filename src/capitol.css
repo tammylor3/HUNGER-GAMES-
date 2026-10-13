@@ -32,7 +32,7 @@ html[data-archive='capitol'] body { font-family:Manrope,Arial,sans-serif; color:
 .cap-book-row { position:relative; z-index:2; display:flex; transform-style:preserve-3d; perspective:1200px; }
 .cap-book-row.is-stack { flex-direction:column; align-items:stretch; width:min(920px,calc(100% - 60px)); gap:8px; }
 .cap-book-row.is-upright { align-items:flex-end; justify-content:center; width:min(930px,100%); gap:12px; padding:0 12px 12px; overflow-x:auto; overscroll-behavior-inline:contain; scrollbar-width:thin; scrollbar-color:rgba(255,255,255,.55) transparent; }
-.cap-book-row.is-upright .cap-book-card { flex:0 0 124px; width:124px; height:var(--cap-book-height); }
+.cap-book-row.is-upright .cap-book-card { flex:0 0 104px; width:104px; height:var(--cap-book-height); }
 .cap-book-card { position:relative; flex:0 0 auto; min-width:0; cursor:pointer; transform-style:preserve-3d; outline:none; }
 .cap-book-row.is-stack .cap-book-card { width:100%; height:var(--cap-book-height); }
 .cap-book-card:focus-visible { outline:2px solid #f3c96b; outline-offset:5px; }
@@ -56,7 +56,7 @@ html[data-archive='capitol'] body { font-family:Manrope,Arial,sans-serif; color:
 .cap-snake-ornament { width:22%; }
 .cap-sunrise-ornament { width:20%; }
 .cap-book-row.is-upright .cap-book-spine { align-items:center; }
-.cap-book-row.is-upright .cap-spine-title { left:50%; right:auto; width:calc(100% - 14px); transform:translate(-50%,-50%); writing-mode:vertical-rl; letter-spacing:.08em; }
+.cap-book-row.is-upright .cap-spine-title { left:50%; right:auto; width:max-content; max-width:none; transform:translate(-50%,-50%) rotate(-90deg); white-space:nowrap; writing-mode:horizontal-tb; font-size:clamp(11px,1.15vw,17px); letter-spacing:.045em; }
 .cap-book-row.is-upright .cap-spine-publisher { left:50%; top:9px; transform:translateX(-50%); font-size:9px; }
 .cap-book-row.is-upright .cap-spine-imprint { right:4px; top:auto; bottom:9px; transform:rotate(180deg); font-size:6px; }
 .cap-book-row.is-upright .cap-spine-ornament { left:50%; top:auto; bottom:34px; width:54%; transform:translateX(-50%) rotate(90deg); }

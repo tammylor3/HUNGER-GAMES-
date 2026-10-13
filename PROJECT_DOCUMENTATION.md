@@ -158,6 +158,8 @@ The two supplied reference images are stored locally in `public/references/` so 
 
 The Capitol page now opens in the centered vertical upright shelf view. The previous flat horizontal stack controls and extra footer copy were removed to match the supplied reference composition. To reduce visible loading lag, the cityscape and local cover fallbacks are preloaded in the page, cover images use asynchronous decoding and high fetch priority when selected, and the local `/covers/` assets load before managed remote storage paths.
 
+The upright shelf was subsequently compacted so the rectangular spines sit smaller and more centrally. Each title is now kept as one continuous rotated line instead of wrapping into multiple stacked lines.
+
 ### 12. Shelf pick-off animation
 
 The selected-book interaction was refined to feel like someone is physically taking a volume from the shelf:
