@@ -139,6 +139,21 @@ The card’s `READ THIS EDITION →` action was changed to open an Amazon search
 
 The interim retailer row was removed so the card now contains only the single Amazon-linked primary action.
 
+### 12. Build.docx Capitol redesign
+
+The supplied `Build.docx` specification was implemented as a focused visual redesign of `/capitol`:
+
+- The supplied white-and-gold Capitol cityscape is now a fixed full-viewport background with a light blur, boosted saturation, and a warm cream-gold readability tint.
+- The title uses a light white treatment with `Archive` in `#f3c96b` and a soft dark shadow.
+- A liquid-glass display control switches between a horizontal **FLAT STACK** and an **UPRIGHT SHELF** view.
+- Flat stack order is publication order from top to bottom: *The Hunger Games*, *Catching Fire*, *Mockingjay*, *The Ballad of Songbirds and Snakes*, and *Sunrise on the Reaping*.
+- The book spines were redesigned as matte printed-cloth rectangles with crisp corners, subtle edge wear, dark lower shadows, wide condensed display lettering, colored `COLLINS` marks, rotated `SCHOLASTIC PRESS` labels, and inline SVG arrows, snake, and sunrise ornaments.
+- The book spines intentionally avoid glass, glow, blur, and soft UI gradients; only surrounding UI uses liquid-glass treatment.
+- The shelf/ledge, footer pill, view toggle, and detail card use translucent frosted styling with bright top-edge highlights and soft shadows.
+- Existing pull-out cover, detail card, Amazon action, click-outside close, Escape key, arrow-key navigation, responsive behavior, and reduced-motion support remain intact.
+
+The two supplied reference images are stored locally in `public/references/` so the redesigned page does not depend on remote background assets.
+
 ### 12. Shelf pick-off animation
 
 The selected-book interaction was refined to feel like someone is physically taking a volume from the shelf:
@@ -163,9 +178,10 @@ src/
   data/
     books.json               Original edition seed data
     capitol-books.json       Capitol edition seed data and cover paths
-public/
-  covers/                    Local official-cover fallbacks
-  manus-routes.json          Declared application routes
+  public/
+    covers/                    Local official-cover fallbacks
+    references/                Build.docx spine and Capitol cityscape references
+    manus-routes.json          Declared application routes
 ```
 
 ## Interaction notes
@@ -209,7 +225,8 @@ public/
 | `d2a98a6` | Add book reading destination links |
 | `0e76d2e` | Link primary book action to Amazon |
 | `dc87ac6` | Remove retailer links from pullout card |
-| latest | Refine realistic shelf pick-off extraction animation |
+| `e6b297d` | Refine realistic shelf pick-off extraction animation |
+| latest | Implement Build.docx Capitol cityscape and printed-spine redesign |
 
 ## Repository
 
