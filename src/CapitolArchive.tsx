@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState, type CSSProperties, type KeyboardEvent } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties, type KeyboardEvent } from 'react'
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 import books from './data/capitol-books.json'
 import CapitolPullout from './CapitolPullout'
@@ -54,7 +54,12 @@ function SpineOrnament({ book }: { book: Book }) {
 function CapitolArchive() {
   const shouldReduceMotion = useReducedMotion()
   const [selectedId, setSelectedId] = useState<string | null>(null)
+  const pendingSelection = useRef<ReturnType<typeof window.setTimeout> | null>(null)
   useEffect(() => { document.title = 'The Capitol Archive' }, [])
+
+  useEffect(() => () => {
+    if (pendingSelection.current) window.clearTimeout(pendingSelection.current)
+  }, [])
 
   useEffect(() => {
     const assetUrls = ['/references/capitol-cityscape.jpeg', ...seededBooks.map((book) => book.fallbackCoverPath)]
@@ -71,22 +76,43 @@ function CapitolArchive() {
   const selectedBook = sortedBooks.find((book) => book.id === selectedId) ?? null
   const transition = shouldReduceMotion ? { duration: 0 } : { type: 'spring' as const, stiffness: 220, damping: 24, mass: .86 }
 
+  const selectBook = useCallback((book: Book) => {
+    if (book.id === selectedId) return
+    if (pendingSelection.current) window.clearTimeout(pendingSelection.current)
+
+    if (selectedId) {
+      // Let the current book finish its close motion before the next book is
+      // mounted, so every mouse selection gets the complete lift-and-rotate entrance.
+      setSelectedId(null)
+      pendingSelection.current = window.setTimeout(() => {
+        pendingSelection.current = null
+        setSelectedId(book.id)
+      }, 240)
+      return
+    }
+    setSelectedId(book.id)
+  }, [selectedId])
+
   useEffect(() => {
     const onKeyDown = (event: globalThis.KeyboardEvent) => {
-      if (event.key === 'Escape') { setSelectedId(null); return }
+      if (event.key === 'Escape') {
+        if (pendingSelection.current) window.clearTimeout(pendingSelection.current)
+        pendingSelection.current = null
+        setSelectedId(null)
+        return
+      }
       if (!selectedId || (event.target as HTMLElement)?.tagName === 'BUTTON') return
       if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return
       const currentIndex = sortedBooks.findIndex((book) => book.id === selectedId)
       if (currentIndex === -1) return
       event.preventDefault()
       const offset = event.key === 'ArrowRight' ? 1 : -1
-      setSelectedId(sortedBooks[(currentIndex + offset + sortedBooks.length) % sortedBooks.length].id)
+      selectBook(sortedBooks[(currentIndex + offset + sortedBooks.length) % sortedBooks.length])
     }
     window.addEventListener('keydown', onKeyDown)
     return () => window.removeEventListener('keydown', onKeyDown)
-  }, [selectedId, sortedBooks])
+  }, [selectedId, sortedBooks, selectBook])
 
-  const selectBook = (book: Book) => setSelectedId(book.id)
   const onSpineKeyDown = (event: KeyboardEvent<HTMLElement>, book: Book) => {
     if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectBook(book) }
   }
@@ -151,7 +177,15 @@ function CapitolArchive() {
             <div className="cap-shelf-surface" aria-hidden="true"><span /><b /></div>
           </div>
 
-          <CapitolPullout book={selectedBook} shouldReduceMotion={shouldReduceMotion} onClose={() => setSelectedId(null)} />
+          <CapitolPullout
+            book={selectedBook}
+            shouldReduceMotion={shouldReduceMotion}
+            onClose={() => {
+              if (pendingSelection.current) window.clearTimeout(pendingSelection.current)
+              pendingSelection.current = null
+              setSelectedId(null)
+            }}
+          />
         </section>
       </main>
 
